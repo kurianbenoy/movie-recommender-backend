@@ -10,13 +10,11 @@ from models.movie import MovieBase, MoviePublic
 
 @lru_cache
 def get_movie_df() -> Any:
-    df_movies = pd.read_csv('./input/links.csv')
-    return df_movies
+    return pd.read_csv('./input/links.csv')
 
 @lru_cache
 def get_local_movie_df() -> Any:
-    df = pd.read_csv('./input/movies.csv')
-    return df
+    return pd.read_csv('./input/movies.csv')
 
 async def get_movie_details_from_tmdb(
     tmdbId: int,
